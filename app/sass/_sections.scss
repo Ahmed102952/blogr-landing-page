@@ -1,38 +1,163 @@
+// start section1
+
 .section1 {
     padding-top: 6.25rem;
 
-    h2 {
-        text-align: center;
-        margin-bottom: 3.625rem;
-    }
+    
     img {
 
         &.mobile-img {
-            width: auto;
-            height: 20.625rem;
+            min-width: 15rem;
+            max-width: 25rem;
             margin-bottom: 3.5rem;
             margin-left: auto;
             margin-right: auto;
         }
-        &.desktop-img {
-            position: absolute;
-            width: 40.625rem;
-            height: 56.25rem;
-            top: 0;
-            right: 0;
-            transform: translateX(29%);
-        }
+        
+        
+    }
+    h3 {
+        font-size: 1.75rem;
     }
     p {
-        font-size: $font-sm;
-        line-height: 1.5;
-        color: $veryDarkGrayishBlue;
-    }
-    div {
         text-align: center;
-        padding: 0 2.9375rem;
+    }
+    
+   .text-group {
         margin-bottom: 3.5rem;
         
+    }
+    @include breakpoint-up(mediam) {
+        padding-top: 10rem;
+
+        h2{
+            
+            font-size: 2.5rem;
+        }
+        h3 {
+            text-align: start;
+        }
+        p {
+            text-align: start;
+        }
+        
+        
+    }
+    @include breakpoint-up(mediam) {
+        .continer {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 8.125rem;
+            align-items: center;
+        
+            .desktop-img {
+                position: absolute;
+                right: -35%;
+                transform: scale(0.7);
+            }
+            .text {
+                grid-column: 1;
+            }
+        }
+    }
+}
+
+// end section1
+
+// start section2
+
+.section2 {
+    height: 50rem;
+
+    img {
+        min-width: 15rem;
+        max-width: 23.5rem;
+        margin: 0 auto;
+    }
+     h2 {
+        color: $white;
+    }
+    p {
+        color: $white;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 39.1875rem;
+        border-radius: 0 120px 0 120px;
+        z-index: -1;
+        background: url(../../assests/images/bg-pattern-circles.svg), $VeryDarkGrayBlue;
+        background-repeat: no-repeat;
+        background-position: 50% 140%;
+    }
+    @include breakpoint-up(mediam) {
+        height: 31.25rem;
+
+        &::before {
+            top: 50%;
+            transform: translateY(-70%);
+            height: 18.75rem;
+            background-position: -39% 92%;
+            background-size: 70%;
+        }
+        h2 {
+            text-align: start;
+            font-size: 1.875rem;
+            margin-bottom: 2.1875rem;
+        }
+        img {
+            min-width: 25rem;
+            margin: 0;
+        }
+        .continer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text-group {
+            max-width: 32.875rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        
+    }
+}
+
+// end section2
+
+// start section3
+
+.section3 {
+    padding-top: 6.25rem;
+
+    
+    img {
+
+        &.mobile-img {
+            min-width: 15rem;
+            max-width: 25rem;
+            margin-bottom: 3.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    p {
+        text-align: center;
+    }
+    
+    
+    .text-group {
+        margin-bottom: 3.5rem;
     }
     @include breakpoint-up(mediam) {
         padding-top: 10rem;
@@ -41,18 +166,51 @@
             
             font-size: 2.5rem;
         }
-        div h2 {
+        h3 {
             text-align: start;
             font-size: 1.75rem;
         }
         p {
             text-align: start;
-            width: 50%;
         }
-        div {
-            
+        .continer {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 8.125rem;
+            align-items: center;
+        
+            .desktop-img {
+                grid-column: 1;
+                position: absolute;
+                left: -35%;
+                transform: scale(0.7);
+            }
+            .text {
+                grid-column: 2;
+            }
         }
         
         
+    }
+}
+
+// end section3
+
+
+section {
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3.625rem;
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 1.75rem;
+    }
+    p {
+        font-size: $font-sm;
+        line-height: 1.5;
+        color: $veryDarkGrayishBlue;
     }
 }
