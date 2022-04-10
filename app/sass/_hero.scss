@@ -1,0 +1,52 @@
+.hero {
+    text-align: center;
+    padding-top: 3.4375rem;
+    padding-bottom: 9.4rem;
+    
+    h1 {
+        font-family: 'Overpass', sans-serif;
+        margin-bottom: 1.375rem;
+        line-height: 1.3;
+        @include breakpoint-up(mediam) {
+            font-size: 3.9375rem;
+        }
+        
+        span {
+            @include breakpoint-down(small) {
+                display: block;
+            }
+        }
+    }
+    p {
+        color: $offWhite;
+        margin-bottom: 3.125rem;
+        
+    }
+    .btn:first-child {
+        margin-right: 1.0625rem;
+    }
+    .special {
+        background: transparent;
+        border: 1px solid $white;
+        &:hover {
+            background: $white;
+            color: $lightRed;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border-radius: 0 0 0 130px;
+        width: 100vw;
+        height: 90%;
+        background: url(../../assests/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, $veryLightRed, $lightRed);
+        background-repeat: no-repeat;
+        background-position: 40% 47%;
+        @include breakpoint-up(small) {
+            background: url(../../assests/images/bg-pattern-intro-desktop.svg), linear-gradient(to bottom, $veryLightRed, $lightRed);
+            background-position: 20% center;
+    
+        }
+    }
+}

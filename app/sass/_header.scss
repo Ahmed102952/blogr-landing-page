@@ -1,0 +1,167 @@
+header {
+    background: transparent;
+
+    nav {
+        z-index: 3;
+        width: 100%;
+        .logo {
+            width: 5.3125rem;
+            height: 2.1875rem;
+        }
+        .links {
+            flex: 1;
+
+            .link{
+                margin-left: 4.0625rem;
+
+                div {
+                    width: 10.625rem;
+                    top: 200%;
+                    left: -20%;
+                    max-height: 0;
+                    overflow: hidden;
+                    background-color: $white;
+                    border-radius: 5px;
+                    transition: 0.3s;
+
+                    p {
+                        margin: 1.5625rem;
+                        cursor: pointer;
+                        color: $veryDarkGrayishBlue;
+
+                        &:hover {
+                            color: $veryDarkBlackBlue;
+                        }
+                    }
+                }
+                &.active {
+                    div {
+                        max-height: 100vh;
+                    }
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+                a {
+                    font-size: $font-sm;
+                    color: $white;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    img {
+                        margin-left: 0.5rem;
+                        width: 0.6875rem;
+                        height: 0.625rem;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        .btn:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+        
+        .wrap {
+            right: 0;
+        }
+        // burger menu
+        .toggle-menu {
+            cursor: pointer;
+
+            span {
+                width: 2.3125rem;
+                height: 3px;
+                background-color: $white;
+                transform-origin: left center;
+                transition: 0.3s;
+            }
+            span:not(:last-child) {
+                margin-bottom: 6px;
+            }
+            &.opened {
+                span:first-child {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+                span:nth-child(2) {
+                    transform: translateX(-50%);   
+                    opacity: 0;
+                }
+                span:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+        // mobile menu
+        .mobile-menu {
+            opacity: 0;
+            top: -1500%;
+            width: 100%;
+            padding-top: 2.1875rem;
+            padding-bottom: 2.1875rem;
+            background-color: $white;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.5s;
+            box-shadow: 5px 10px 25px rgba(0,0,0,0.3);
+
+            &.active {
+                opacity: 1;
+                top: 200%;
+            }
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: $grayishBlue;
+            }
+            .link {
+                margin-bottom: 2.25rem;
+
+                a {
+                    margin-bottom: 1.625rem;
+                    font-size: $font-sm;
+                    color: $veryDarkBlackBlue;
+                }
+                img {
+                    margin-left: 0.5rem;
+                    width: 0.6875rem;
+                    height: 0.625rem;
+                    transition: 0.5s;
+                }
+                div {
+                    width: 100%;
+                    max-height: 0;
+                    overflow: hidden;
+                    background-color: $offWhite;
+                    transition: 0.5s;
+                    
+                    p {
+                        color: $veryDarkGrayishBlue;
+                        margin: 1.75rem;
+                    }
+                    
+                }
+                &.active {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                    div {
+                        max-height: 100vh;
+                    }
+                }
+                
+            }
+            .btn {
+                width: 8.8125rem;
+            }
+            .menu-btn {
+                color: $veryDarkBlackBlue;
+                margin: 0.5rem 0;
+            }
+            
+            
+        }
+    }
+
+}

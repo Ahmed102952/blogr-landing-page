@@ -1,0 +1,140 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//      continer
+body {
+    font-size: 1rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+.continer {
+    max-width: 69.375rem;
+    margin-left: auto;
+    margin-right: auto;
+    &--py {
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+    &--px {
+        padding-left: 1.4375rem;
+        padding-right: 1.4375rem;
+    }
+}
+section {
+    margin-bottom: 12.75rem;
+    @include breakpoint-up(large) {
+        margin-bottom: 20rem;
+    }
+}
+img {
+    width: 100%;
+}
+a, a:visited {
+    display: block;
+    text-decoration: none;
+}
+h1 {
+    font-size: $font-lg;
+    color: $white;
+}
+h2 {
+    color: $veryDarkBlackBlue;
+    font-size: 1.875rem;
+    @include breakpoint-up(large) {
+        font-size: 2.5rem;
+    }
+}
+p {
+    font-family: 'Overpass', sans-serif;
+    font-size: $font-mid;
+}
+
+//      display
+.flex {
+    display: flex;
+
+    &--dir-c {
+        flex-direction: column;
+    }
+    &--jc-c {
+        justify-content: center;
+    }
+    &--jc-fs {
+        justify-content: flex-start;
+    }
+    &--jc-sb {
+        justify-content: space-between;
+    }
+    &--ai-c {
+        align-items: center;
+    }
+}
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
+}
+
+
+// postition 
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+
+
+
+
+// buttons
+.btn {
+    padding: 1rem 0;
+    width: 8.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $white;
+    border-radius: 25px;
+    text-align: center;
+
+    &.white-btn {
+        background-color: $white;
+        color: $lightRed;
+    }
+    &.primary-btn {
+        background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: $white;
+        
+    }
+    &:hover {
+        background: lighten($color: $lightRed, $amount: 20);
+        color: $white;
+    }
+}
+
+
+// visibility
+.hide-for-desktop { // hide for desktop
+    @include breakpoint-up(small) {
+        display: none;
+    }
+}
+.hide-for-small-desktop { // hide for mediam desktop
+    @include breakpoint-down(mediam) {
+        display: none;
+    }
+}
+.show-for-small-desktop { // hide for mediam desktop
+    @include breakpoint-up(mediam) {
+        display: none;
+    }
+}
+.hide-for-mobile { // hide for mobile
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}
