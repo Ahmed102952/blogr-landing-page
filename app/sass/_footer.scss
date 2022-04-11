@@ -1,0 +1,55 @@
+footer {
+    padding: 4.375rem 0;
+    background: $VeryDarkGrayishBlue-footerBg;
+    border-top-right-radius: 120px;
+
+    img {
+        width: 6.625rem;
+        height: 2.8125rem;
+        margin: 0 auto;
+    }
+    .continer {
+        display: grid;
+        align-items: center;
+        gap: 5rem;
+        
+        div {
+            text-align: center;
+        }
+        p {
+            font-size: $font-sm;
+            color: $offWhite;
+            margin-bottom: 1rem;
+            &:not(.special) {
+                cursor: pointer;
+                &:hover {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+            &.special {
+                color: $white;
+                margin-bottom: 2.4375rem;
+            }
+        }
+        @include breakpoint-up(mediam) {
+            grid-template-columns: repeat(4, 1fr);
+            align-items: flex-start;
+            p {
+                text-align: start;
+            }
+        }
+
+    }
+    .attribution {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        transform: translateY(300%);
+        a {
+            color: $lightRed;
+            margin-left: 0.4rem;
+        }
+    }
+}
