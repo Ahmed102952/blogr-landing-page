@@ -68,27 +68,46 @@ header {
         // burger menu
         .toggle-menu {
             cursor: pointer;
+            width: $lineWidth;
+            height: $lineHeight;
+            
 
             span {
-                width: 2.3125rem;
-                height: 3px;
+                position: absolute;
+                width: $lineWidth;
+                height: $rectangleHeight;
                 background-color: $white;
-                transform-origin: left center;
-                transition: 0.3s;
+                border-radius: $rectangleRadius;
+                transition: 0.5s;
             }
-            span:not(:last-child) {
-                margin-bottom: 6px;
+            span:not(:nth-child(2)) {
+                width: calc(#{$lineWidth} / 2);
+            }
+            span:first-child {
+                top: 0;
+                left: 0;
+                transform-origin: top left;
+            }
+            span:nth-child(2) {
+                top: 50%;
+                left: 0;
+                width: $lineWidth;
+                transform: translateY(-50%);
+            }
+            span:last-child {
+                bottom: 0;
+                right: 0;
+                transform-origin: bottom right;
             }
             &.opened {
                 span:first-child {
-                    transform: rotate(45deg) translate(-5px, -6px);
+                    transform: translateX($translate) rotate(45deg);
                 }
                 span:nth-child(2) {
-                    transform: translateX(-50%);   
-                    opacity: 0;
+                    transform: translateY(-50%) rotate(-45deg);   
                 }
                 span:last-child {
-                    transform: rotate(-45deg);
+                    transform: translateX(calc(-1 * #{$translate})) rotate(45deg);
                 }
             }
 

@@ -13,3 +13,10 @@ $offWhite: hsl(240, 7%, 94%);
 $font-sm: 1rem;
 $font-mid: 1.25rem;
 $font-lg: 2.25rem;
+
+// toggle-menu
+$lineWidth: 2.3125rem;
+$lineHeight: calc(#{$lineWidth} * 0.8);
+$rectangleHeight: calc(#{$lineWidth} * 0.1);
+$rectangleRadius: calc(#{$lineWidth} * 0.04);
+$translate: calc(#{$lineWidth} * 0.17);
