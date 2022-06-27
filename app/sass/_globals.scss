@@ -143,3 +143,7 @@ p {
         display: none;
     }
 }
+
+.disable-scroll {
+    overflow-y: hidden;
+}

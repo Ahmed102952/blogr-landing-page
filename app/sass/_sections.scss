@@ -53,8 +53,11 @@
         
             .desktop-img {
                 position: absolute;
-                right: -38%;
-                transform: scale(0.7);
+                right: 0%;
+                transform: translateX(40%);        
+                img {
+                    width: 100%;
+                }
             }
             .text {
                 grid-column: 1;
