@@ -4,4 +4,6 @@
 
 - Landing page made with HTML and SCSS, JS
 
+- Responsive for all screens 
+
 [Live Preview](https://blogr-landing-page.am0.tech)
